@@ -112,4 +112,3 @@ dependencies retain their upstream terms: see [NOTICE](NOTICE) and
 have no license file in the pinned module snapshots; this repository does not
 vendor them or claim they are MIT-licensed.
 
-[中文使用说明](README_zh.md)
