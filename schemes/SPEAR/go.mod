@@ -1,0 +1,16 @@
+module spear-artifact
+
+go 1.24.7
+
+require (
+	github.com/accumulators-agg/bp v0.0.0-20221118082810-b4c52aff33ef
+	github.com/accumulators-agg/go-poly v0.0.0-20221118081612-342b847a2704
+	github.com/alinush/go-mcl v0.0.0-20210224202455-eb6000c9b115
+)
+
+require (
+	github.com/magefile/mage v1.10.0 // indirect
+	github.com/sirupsen/logrus v1.7.1 // indirect
+	golang.org/x/crypto v0.0.0-20220829220503-c86fa9a7ed90 // indirect
+	golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1 // indirect
+)

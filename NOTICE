@@ -1,0 +1,4 @@
+SPEAR research artifact — original contributions Copyright (c) 2026 SPEAR contributors.
+Includes historical adaptations informed by Coconut (Alberto Sonnino and contributors), Apache-2.0, and bilinear-accumulator algorithms implemented by accumulators-agg/bp, Apache-2.0.
+Dependencies retain their own notices. See THIRD_PARTY.md and third_party/.
+Comparison implementations do not imply endorsement by the referenced paper authors.

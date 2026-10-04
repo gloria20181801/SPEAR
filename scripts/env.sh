@@ -1,0 +1,10 @@
+# Source this file from bash, do not execute it as a child shell.
+SPEAR_ARTIFACT_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+SPEAR_NATIVE_PREFIX="${SPEAR_NATIVE_PREFIX:-$SPEAR_ARTIFACT_ROOT/.deps/native}"
+SPEAR_NATIVE_LIB="$SPEAR_NATIVE_PREFIX/lib"
+if [[ ! -d "$SPEAR_NATIVE_LIB" && -d "$SPEAR_NATIVE_PREFIX/lib64" ]]; then SPEAR_NATIVE_LIB="$SPEAR_NATIVE_PREFIX/lib64"; fi
+export CGO_ENABLED=1
+export CGO_CFLAGS="-I$SPEAR_NATIVE_PREFIX/include"
+export CGO_CXXFLAGS="-I$SPEAR_NATIVE_PREFIX/include"
+export CGO_LDFLAGS="-L$SPEAR_NATIVE_LIB -Wl,-rpath,$SPEAR_NATIVE_LIB"
+export LD_LIBRARY_PATH="$SPEAR_NATIVE_LIB${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
